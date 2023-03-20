@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 const App = () => {
   return (
     <>
-      <img src={`/logo2.png`} alt="preview" />
+      <img src={`/logo2.png`} alt="preview" style={{ display: 'hidden'}}/>
       <Head>
         <title>AC Government Contracting</title>
       </Head>
