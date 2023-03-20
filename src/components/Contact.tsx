@@ -48,10 +48,10 @@ const Contact: React.FC = () => {
 
   return (
     <section className={styles.main} id="contact">
-        <div>
-            <h1>CONTACT</h1>
-        </div>
-        <hr />
+      <div>
+          <h1>CONTACT</h1>
+      </div>
+      <hr />
     <div className={styles.contactForm}>
       <form onSubmit={handleSubmit}>
         <input
