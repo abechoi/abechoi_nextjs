@@ -1,40 +1,51 @@
 // pages/api/sendEmail.ts
+
 import { NextApiRequest, NextApiResponse } from 'next';
-import sgMail from '@sendgrid/mail';
-import dotenv from 'dotenv';
+import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
+import { Credentials } from '@aws-sdk/types';
 
-dotenv.config();
+const credentials: Credentials = {
+  accessKeyId: process.env.ACCESS_KEY_ID as string,
+  secretAccessKey: process.env.SECRET_ACCESS_KEY as string,
+};
 
-if (!process.env.SENDGRID_API_KEY) {
-  throw new Error('SENDGRID_API_KEY is not defined');
-}
+const sesClient = new SESClient({
+  region: process.env.REGION,
+  credentials,
+});
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const sendEmailHandler = async (req: NextApiRequest, res: NextApiResponse) => {
+  if (req.method !== 'POST') {
+    res.status(405).json({ message: 'Method not allowed' });
+    return;
+  }
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  if (req.method === 'POST') {
-    const { name, message } = req.body;
+  const { name, email, message } = req.body;
 
-    const content = {
-      to: 'abraham.choi@icloud.com',
-      from: 'abraham.choi@icloud.com',
-      subject: `New Message from ${name}`,
-      text: message,
-      html: `<p>${message}</p>`,
-    };
+  const params = {
+    Source: process.env.WORKMAIL_EMAIL_ADDRESS as string,
+    Destination: {
+      ToAddresses: [process.env.WORKMAIL_EMAIL_ADDRESS as string],
+    },
+    Message: {
+      Subject: {
+        Data: 'Contact Form Submission',
+      },
+      Body: {
+        Text: {
+          Data: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+        },
+      },
+    },
+  };
 
-    try {
-      await sgMail.send(content);
-      res.status(200).send('Message sent successfully.');
-    } catch (error) {
-      console.error('Error sending email', error);
-      res.status(400).send('Message not sent.');
-      res.status(500).json({ message: 'Error sending email', error });
-    }
-  } else {
-    res.status(404).send('Invalid request.');
+  try {
+    await sesClient.send(new SendEmailCommand(params));
+    res.status(200).json({ message: 'Email sent successfully' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Failed to send email' });
   }
 };
 
-export default handler;
+export default sendEmailHandler;
