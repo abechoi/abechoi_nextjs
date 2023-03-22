@@ -5,12 +5,12 @@ import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
 import { Credentials } from '@aws-sdk/types';
 
 const credentials: Credentials = {
-  accessKeyId: process.env.ACCESS_KEY_ID as string,
-  secretAccessKey: process.env.SECRET_ACCESS_KEY as string,
+  accessKeyId: process.env.NEXT_PUBLIC_ACCESS_KEY_ID as string,
+  secretAccessKey: process.env.NEXT_PUBLIC_SECRET_ACCESS_KEY as string,
 };
 
 const sesClient = new SESClient({
-  region: process.env.REGION,
+  region: process.env.NEXT_PUBLIC_REGION,
   credentials,
 });
 
@@ -23,9 +23,9 @@ const sendEmailHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { name, email, message } = req.body;
 
   const params = {
-    Source: process.env.WORKMAIL_EMAIL_ADDRESS as string,
+    Source: process.env.NEXT_PUBLIC_WORKMAIL_EMAIL_ADDRESS as string,
     Destination: {
-      ToAddresses: [process.env.WORKMAIL_EMAIL_ADDRESS as string],
+      ToAddresses: [process.env.NEXT_PUBLIC_WORKMAIL_EMAIL_ADDRESS as string],
     },
     Message: {
       Subject: {
