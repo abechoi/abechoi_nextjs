@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent, forwardRef } from 'react';
 import styles from '@/styles/Contact.module.css';
 
 interface FormState {
@@ -7,7 +7,11 @@ interface FormState {
   message: string;
 }
 
-const Contact: React.FC = () => {
+interface ContactProps {
+  ref?: React.Ref<HTMLDivElement>;
+}
+
+const Contact: React.ForwardRefRenderFunction<HTMLDivElement, ContactProps> = (_, ref) => {
   const [formState, setFormState] = useState<FormState>({
     name: '',
     email: '',
@@ -46,7 +50,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section className={styles.main} id="contact">
+    <section className={styles.main} id="contact" ref={ref}>
       <div>
           <h1>CONTACT</h1>
       </div>
@@ -85,4 +89,4 @@ const Contact: React.FC = () => {
   );
 };
 
-export default Contact;
+export default forwardRef(Contact);

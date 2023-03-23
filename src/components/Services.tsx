@@ -1,8 +1,9 @@
+import React, { forwardRef } from 'react';
 import styles from '@/styles/Services.module.css';
 
-const Services = () => {
+const Services = forwardRef<HTMLDivElement>((_, ref) => {
     return (  
-        <section className={styles.main} id='services'>
+        <section className={styles.main} id='services' ref={ref}>
             <div>
                 <h1>SERVICES</h1>
             </div>
@@ -35,6 +36,6 @@ const Services = () => {
             </div>
         </section>
     );
-}
+});
  
 export default Services;
