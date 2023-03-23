@@ -22,4 +22,4 @@ const About = () => {
   };
   
 
-export default withNavbar(About);
+export default About;

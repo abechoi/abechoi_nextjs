@@ -1,5 +1,4 @@
 import styles from '@/styles/Home.module.css';
-import withNavbar from './withNavbar';
 
 const Home = () => {
     return (  
@@ -29,4 +28,4 @@ const Home = () => {
     );
 }
  
-export default withNavbar(Home);
+export default Home;

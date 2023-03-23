@@ -1,5 +1,4 @@
 import styles from '@/styles/Services.module.css';
-import withNavbar from './withNavbar';
 
 const Services = () => {
     return (  
@@ -38,4 +37,4 @@ const Services = () => {
     );
 }
  
-export default withNavbar(Services);
+export default Services;

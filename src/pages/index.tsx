@@ -4,6 +4,7 @@ import Services from '@/components/Services';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Head>
         <title>AC Government Contracting</title>
       </Head>
+      <Navbar/>
       <Home/>
       <Services/>
       <About/>

@@ -1,6 +1,5 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
 import styles from '@/styles/Contact.module.css';
-import withNavbar from './withNavbar';
 
 interface FormState {
   name: string;
@@ -86,4 +85,4 @@ const Contact: React.FC = () => {
   );
 };
 
-export default withNavbar(Contact);
+export default Contact;
