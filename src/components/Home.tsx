@@ -1,9 +1,9 @@
+import React, { forwardRef } from 'react';
 import styles from '@/styles/Home.module.css';
-import withNavbar from './withNavbar';
 
-const Home = () => {
+const Home = forwardRef<HTMLDivElement>((_, ref) => {
     return (  
-        <section className={styles.main}>
+        <section className={styles.main} ref={ref}>
             <div className={styles.wrapper}>
                 <div className={styles.banner}>
                     <div className={styles.row}>
@@ -27,6 +27,6 @@ const Home = () => {
             <img src={`/hero.png`} alt='hero'></img>
         </section>
     );
-}
+});
  
-export default withNavbar(Home);
+export default Home;

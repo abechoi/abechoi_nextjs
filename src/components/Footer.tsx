@@ -1,5 +1,4 @@
 import styles from '@/styles/Footer.module.css';
-import withNavbar from './withNavbar';
 
 const Footer = () => {
     return ( 
@@ -29,4 +28,4 @@ const Footer = () => {
     );
 }
  
-export default withNavbar(Footer);
+export default Footer;

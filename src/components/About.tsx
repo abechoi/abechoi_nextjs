@@ -1,9 +1,9 @@
+import React, { forwardRef } from 'react';
 import styles from '@/styles/About.module.css';
-import withNavbar from './withNavbar';
 
-const About = () => {
+const About = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-      <section className={styles.main} id='about'>
+      <section className={styles.main} id='about' ref={ref}>
         <div>
             <h1>ABOUT</h1>
         </div>
@@ -19,7 +19,7 @@ const About = () => {
         </div>
       </section>
     );
-  };
+  });
   
 
-export default withNavbar(About);
+export default About;
