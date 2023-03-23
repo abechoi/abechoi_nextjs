@@ -95,8 +95,54 @@ a {
   text-decoration: none;
 }
 
+h1, h2, p {
+  text-align: center;
+}
+
+h1 {
+  font-size: 55px;
+}
+
+h2 {
+  font-size: 20px;
+}
+p {
+  font-size: 20px;
+}
+
+li {
+  font-size: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  margin: 20px;
+  border: #FF4136 1px solid;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+/* Tablet Portait */
+@media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) and (min-device-width: 30rem) {
+  li {
+    font-size: 1.6rem;
+  }
+}
+
+/* Desktop (2k, 4k, 1080p, etc) */
+@media only screen and (min-width: 48rem) and (orientation: landscape) {
+  p {
+    font-size: 1.3rem;
+  }
+
+  li {
+    font-size: 1.8rem;
   }
 }
