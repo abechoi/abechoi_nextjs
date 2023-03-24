@@ -1,38 +1,45 @@
 .main {
+    display: flex;
     flex-direction: column;
     background-color:#fff;
     font-family: 'Arial';
     color: black;
 }
+
 .main h1 {
     padding-top: 200px;
-}
-.main p {
-    padding-top: 15px;
-    padding-bottom: 60px;
+    font-size: 55px;
     text-align: center;
 }
+
+.main hr {
+    margin: 30px 20px;
+    border: #FF4136 1px solid;
+}
+
 .contactForm form {
     display: flex;
     flex-direction: column;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 20px 60px 20px;
     padding: 30px 40px;
-    max-width: 400px;
     background-color: #282A36;
     box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.6);
 }
+
 .contactForm form input{
     margin: 20px 0px;
     padding: 0px 5px;
     height: 2rem;
     border: white solid 1px;
 }
+
 .contactForm form textarea{
     margin-top: 20px;
     padding: 5px;
     height: 10rem;
     border: white solid 1px;
 }
+
 .contactForm form button{
     height: 3rem;
     font-size: 1.3rem;
@@ -40,17 +47,23 @@
 
 @media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) and (min-width: 30rem) {
     .contactForm form {
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        padding: 60px 50px;
+        margin: 0px 140px 60px 140px;
+        padding: 30px 100px;
+        
     }
+
 }
 
 /* Desktop (2k, 4k, 1080p, etc) */
 @media only screen and (min-width: 48rem) and (orientation: landscape) {
-    .contactForm form {
+
+    .contactForm {
         margin: 0 auto;
-        padding: 60px 50px;
+    }
+
+    .contactForm form {
+        width: 600px;
+        padding: 100px;
+        
     }
 }

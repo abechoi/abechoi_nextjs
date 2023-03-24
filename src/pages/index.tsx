@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import Head from 'next/head';
 import Home from '@/components/Home';
 import Services from '@/components/Services';
 import About from '@/components/About';
