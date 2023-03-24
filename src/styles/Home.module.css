@@ -4,86 +4,63 @@
   flex-direction: column;
   padding-top: 250px;
 }
-
 .wrapper {
   display: flex;
   flex-direction: column;
 }
-
 .banner {
   margin: 0 auto;
   font-family: 'arial';
 }
-
 .row {
   display: flex;
 }
-
 .row::after {
   content: "";
   display: table;
   clear: both;
 }
-
 .row div {
   flex: 0 0 50%;
   max-width: 50%;
   padding-right: 15px;
   padding-left: 15px;
 }
-
 .row:last-child div:last-child {
   margin: 8px 0;
 }
-
 .main h1:first-child {
   flex: 0 0 100%;
   max-width: 100%;
 }
-
 .wrapper div:last-child p {
   margin-bottom: 40px;
+  text-align: center;
 }
 
 /* Tablet Portait */
 @media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) and (min-width: 30rem) {
-  .main {
-    padding-top: 250px;
-  }
-
   .wrapper {
     display: flex;
     flex-direction: row;
   }
-
   .banner {
     width: 50%;
   }
-
   .wrapper div:last-child {
     width: 50%;
   }
-
-  .row {
-    width: 100%;
-    margin: 0 auto;
-  }
-
   .banner .row:last-child {
     margin: 0 auto;
     width: 78%;
   }
-
   .main hr {
     display: none;
   }
-
   .main p{
-    padding: 0.5rem 1.2rem;
-    font-size: 1.5rem;
+    padding: 20px 30px;
     border-left: 1px solid #FF4136;
   }
-
   .main img {
     margin: 40px auto 0px auto;
     max-width: 768px;
@@ -93,46 +70,28 @@
 
 /* Desktop (2k, 4k, 1080p, etc) */
 @media only screen and (min-width: 48rem) and (orientation: landscape) {
-  .main {
-    padding-top: 250px;
-  }
-
   .wrapper {
-    display: flex;
     flex-direction: row;
-    margin: 0 auto
+    margin: 0 auto;
   }
-
   .banner {
-    margin: auto;
     width: 45%;
-    max-width: 400px;
     border-right: 1px solid #FF4136;
   }
-
   .banner .row:last-child {
     width: 87%;
   }
-
   .wrapper div:last-child {
     margin: auto;
     width: 50%;
     max-width: 500px;
   }
-
   .wrapper div:last-child p {
     margin-bottom: 0px;
   }
-
-  .row {
-    width: 100%;
-    margin: 0 auto;
-  }
-
   .main hr {
     display: none;
   }
-
   .main img {
     max-width: 768px;
     margin: 80px auto 0px auto;
