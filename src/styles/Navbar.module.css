@@ -37,15 +37,10 @@
   padding: 0;
 }
 
-.nav h1 {
-  margin: 0;
-  font-size: 1.875rem;
-  overflow: hidden;
-}
 
 .nav li {
   margin: 0 16px;
-  font-size: 1.3rem;
+
 }
 
 .nav a {
@@ -75,14 +70,10 @@
     justify-content: center;
     flex-direction: row;
   }
-
-  .nav li {
-    font-size: 1.6rem;
-  }
 }
-/* Desktop (2k, 4k, 1080p, etc) */
 
-@media screen and (min-width: 48rem) and (orientation: landscape) {
+/* Desktop (2k, 4k, 1080p, etc) */
+@media only screen and (min-width: 48rem) and (orientation: landscape) {
   .wrapper {
     display: flex;
     flex-direction: row;
@@ -103,9 +94,5 @@
     justify-content: center;
     flex-direction: row;
 
-  }
-
-  .nav li {
-    font-size: 1.8rem;
   }
 }

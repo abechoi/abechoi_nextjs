@@ -10,17 +10,17 @@ const Home = forwardRef<HTMLDivElement>((_, ref) => {
                         <h1>ABRAHAM</h1>
                     </div>
                     <div className={styles.row}>
-                        <div className={styles.col}>
+                        <div>
                             <h1>CHOI</h1>
                         </div>
-                        <div className={styles.col}>
+                        <div>
                             <h2>Government</h2>
                             <h2>Contracting</h2>
                         </div>
                     </div>
                 </div>
                     <hr/>
-                <div className={styles.message}>
+                <div>
                     <p>Get fast delivering exceptional services with unparalleled quality and efficiency in every project, ensuring the success of our clients' missions.</p>
                 </div>
             </div>
