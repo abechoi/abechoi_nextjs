@@ -83,7 +83,7 @@ const Contact: React.ForwardRefRenderFunction<HTMLDivElement, ContactProps> = (_
         ></textarea>
         <button type="submit">SEND</button>
       </form>
-      {status && <p>{status}</p>}
+      <p>{status}</p>
     </div>
     </section>
   );
