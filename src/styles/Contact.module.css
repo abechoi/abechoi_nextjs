@@ -12,11 +12,6 @@
     text-align: center;
 }
 
-.main hr {
-    margin: 30px 20px;
-    border: #FF4136 1px solid;
-}
-
 .contactForm form {
     display: flex;
     flex-direction: column;
