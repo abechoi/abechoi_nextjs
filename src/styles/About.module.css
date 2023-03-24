@@ -5,43 +5,39 @@
     font-family: 'Arial';
     color: white;
 }
-
 .main h1 {
     padding-top: 200px;
-    font-size: 55px;
-    text-align: center;
 }
-
-.main hr {
-    margin: 30px 20px;
-    border: #FF4136 1px solid;
-}
-
 .main img{
     max-width: 75%;
     margin: 0 auto;
     border-radius: 50%;
     box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.6);
 }
-
 .bio p {
-    margin: 30px 20px;
-    font-size: 1.2rem;
+    margin: 20px;
 }
 
+/* Tablet Portait */
 @media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) and (min-width: 30rem) {
     .main h1 {
         padding-top: 200px;
     }
-
     .main img{
         width: 50%;
         margin: 0 auto;
         border-radius: 50%;
     }
-
-    .bio p {
-        font-size: 1.4rem;
+    .bio {
+        display: flex;
+        flex-direction: row;
+    }
+    .bio div {
+        margin: 40px 0;
+        width: 50%;
+    }
+    .bio div:first-child {
+        border-right: #FF4136 1px solid ;
     }
 }
 
@@ -52,20 +48,15 @@
         margin: 0 auto;
         border-radius: 50%;
     }
-
     .bio {
         display: flex;
         justify-content: center;
     }
-
-    .bio p {
-        width: 50%;
-        max-width: 400px;
-        margin: 30px 0;
-        padding: 0px 20px;
+    .bio div {
+        margin: 40px 0;
+        max-width: 25%;
     }
-
-    .bio p:first-child {
-        border-right: #FF4136 1px solid;
+    .bio div:first-child {
+        border-right: #FF4136 1px solid ;
     }
 }
