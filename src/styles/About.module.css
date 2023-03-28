@@ -1,7 +1,7 @@
 .main {
     display: flex;
     flex-direction: column;
-    background-color:#282A36;
+    background-image: linear-gradient(to left bottom, #384170 0, #282A36 100%);
     font-family: 'Arial';
     color: white;
 }
