@@ -12,13 +12,19 @@
     padding-bottom: 60px;
     text-align: center;
 }
+.main input, .main textarea{
+    background-color: #3B3B3B;
+}
+.main button{
+    background-color: #7B7B7B;
+}
 .contactForm form {
     display: flex;
     flex-direction: column;
     margin: 0px 20px 0px 20px;
     padding: 30px 40px;
     max-width: 400px;
-    background-color: #282A36;
+    background-color: #33365f;
     box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.6);
 }
 .contactForm form input{
