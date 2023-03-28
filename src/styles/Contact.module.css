@@ -15,9 +15,6 @@
 .main input, .main textarea{
     background-color: #3B3B3B;
 }
-.main button{
-    background-color: #7B7B7B;
-}
 .contactForm form {
     display: flex;
     flex-direction: column;
