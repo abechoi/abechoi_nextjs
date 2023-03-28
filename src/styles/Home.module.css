@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 250px;
+  background-image: linear-gradient(to left bottom, #384170 0, #282A36 100%);
 }
 .wrapper {
   display: flex;
