@@ -20,7 +20,7 @@ const Home = forwardRef<HTMLDivElement>((_, ref) => {
                     </div>
                 </div>
                     <hr/>
-                <div>
+                <div className={styles.message}>
                     <p>Get fast delivering exceptional services with unparalleled quality and efficiency in every project, ensuring the success of our clients' missions.</p>
                 </div>
             </div>

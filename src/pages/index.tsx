@@ -17,6 +17,9 @@ const App = () => {
 
   useEffect(() => {
     switch (activeSection) {
+      case 'home':
+        document.title = 'AC | Government Contracting';
+        break;
       case 'services':
         document.title = 'AC | Services';
         break;
